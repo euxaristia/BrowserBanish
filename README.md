@@ -1,7 +1,7 @@
 # 🚀 BrowserBlaster
 
 <p align="center">
-  <img src="BrowserBlaster.png" alt="BrowserBlaster Logo" width="300"/>
+  <img src="BrowserBlasterIcon.png" alt="BrowserBlaster Logo" width="300"/>
 </p>
 
 **Deletes all user data from major browsers on Windows—returns browsers to a fresh state.**

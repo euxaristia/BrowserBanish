@@ -5,7 +5,8 @@ Remove-Item -Recurse -Force "$env:LOCALAPPDATA\Google\Chrome\User Data\Default\C
 
 # Chromium
 Remove-Item -Recurse -Force "$env:LOCALAPPDATA\Chromium\User Data\Default\Cache", `
-    "$env:LOCALAPPDATA\Chromium\User Data\Default\History" -ErrorAction SilentlyContinue
+    "$env:LOCALAPPDATA\Chromium\User Data\Default\History", `
+    "$env:LOCALAPPDATA\Chromium\User Data\Default\Cookies" -ErrorAction SilentlyContinue
 
 # Firefox SAFER -- Don't delete profile folders, delete temp/history/cookies files within all profiles
 $firefoxProfiles1 = Get-ChildItem "$env:APPDATA\Mozilla\Firefox\Profiles" -Directory -ErrorAction SilentlyContinue

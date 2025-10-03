@@ -33,11 +33,15 @@ Remove-Item -Recurse -Force "$env:LOCALAPPDATA\BraveSoftware\Brave-Browser\User 
 
 # Vivaldi
 Remove-Item -Recurse -Force "$env:LOCALAPPDATA\Vivaldi\User Data\Default\Cache", `
-    "$env:LOCALAPPDATA\Vivaldi\User Data\Default\History" -ErrorAction SilentlyContinue
+    "$env:LOCALAPPDATA\Vivaldi\User Data\Default\History", `
+    "$env:LOCALAPPDATA\Vivaldi\User Data\Default\Cookies" -ErrorAction SilentlyContinue
 
-# Opera (be cautious: deleting Opera profile folders removes everything)
+# Opera
 Remove-Item -Recurse -Force "$env:APPDATA\Opera Software\Opera Stable\Cache", `
     "$env:APPDATA\Opera Software\Opera Stable\History", `
-    "$env:LOCALAPPDATA\Opera Software\Opera Stable\Cache" -ErrorAction SilentlyContinue
+    "$env:APPDATA\Opera Software\Opera Stable\Cookies", `
+    "$env:LOCALAPPDATA\Opera Software\Opera Stable\Cache", `
+    "$env:LOCALAPPDATA\Opera Software\Opera Stable\Cookies" -ErrorAction SilentlyContinue
+
 
 Write-Host "Browser junk and history deleted without breaking your profiles."
